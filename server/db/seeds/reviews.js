@@ -7,7 +7,7 @@ exports.seed = function(knex) {
       return knex('reviews').insert([
         {
           id: 1, 
-          user_Id: 1,
+          user_Id: 2,
           bakery_ID: 1, 
           title: 'A triumph for the meatless pie',
           pie: 'Vegan Curry Lentil', 
@@ -21,7 +21,7 @@ exports.seed = function(knex) {
         },
         {
           id: 2, 
-          user_Id: 3,
+          user_Id: 4,
           bakery_ID: 3,
           title: 'I would turn Vegan for this morsel of goodness from the gods', 
           pie: 'Vegan Curry Lentil', 
@@ -36,3 +36,4 @@ exports.seed = function(knex) {
       ]);
     });
 };
+

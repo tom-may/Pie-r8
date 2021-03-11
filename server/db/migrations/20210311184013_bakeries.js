@@ -1,6 +1,6 @@
 
 exports.up = function (knex) {
-    return knex.schema.createTable('properties', table => {
+    return knex.schema.createTable('bakeries', table => {
       table.increments('id')
       table.string('name')
       table.string('address') 
@@ -11,5 +11,5 @@ exports.up = function (knex) {
   }
   
   exports.down = function (knex) {
-    return knex.schema.dropTable('properties')
+    return knex.schema.dropTable('bakeries')
   }
