@@ -26,7 +26,30 @@ router.get('/:id', (req,res) => {
 })
 
 router.post('/', (req,res) => {
+    const  review = req.body
     db.addReview(review)
+    .then(() => {
+        res.sendStatus(200)
+    })
+    .catch(err => {
+        console.log("Error", err)
+        res.status(500).json({message: "Something went worng"})
+    })
+})
+
+router.patch('/:id', (req,res) => {
+    const id = req.params.id
+    const review = req.body
+    db.updateReview(
+        id, 
+        review.title, 
+        review.pie, 
+        review.price, 
+        review.pros, 
+        review.cons, 
+        review.review, 
+        review.rating
+        )
     .then(() => {
         res.sendStatus(200)
     })
@@ -47,3 +70,5 @@ router.delete('/:id', (req,res) => {
         res.status(500).json({message: "Something went worng"})
     })
 })
+
+module.exports = router
