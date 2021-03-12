@@ -1,21 +1,14 @@
 const connection = require('./connection')
 
-module.exports = {
-    getBakeries,
-    getBakeryById,
-    addBakery,
-    updateBakery,
-    deleteBakery
-}
-
 function getBakeries (db = connection) {
     return db('bakeries')
 }
 
-function getBakeryById(id, db = connection)
+function getBakeryById(id, db = connection) {
     return db('bakeries')
     .where(id, 'id')
     .first()
+}
 
 function addBakery (bakery, db = connection) {
     return db('bakeries')
@@ -38,3 +31,10 @@ function deleteBakery (id, db = connection) {
     .delete()
 }
 
+module.exports = {
+    getBakeries,
+    getBakeryById,
+    addBakery,
+    updateBakery,
+    deleteBakery
+}
