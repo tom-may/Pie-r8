@@ -6,12 +6,12 @@ function addUsers (user, db = connection) {
   // .then(ids => ids[0])
 }
 
-function updateUser (id, firstName, lastName, email, location, db = connection) {
+function updateUser (id, first_name, last_name, email, location, db = connection) {
   return db('users')
   .where('id', id)
   .update ({
-    firstName: firstName,
-    lastName: lastName,
+    first_name: first_name,
+    last_name: last_name,
     email: email,
     location, location
   })

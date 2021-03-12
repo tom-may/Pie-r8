@@ -19,12 +19,12 @@ router.patch('/:id', (req,res) => {
     const user = req.body
     db.updateUser(
         id, 
-        user.firstName, 
-        user.lastName, 
+        user.first_name, 
+        user.last_name, 
         user.email,
         user.location
         )
-        .then(() => {
+        .then(user => {
             res.sendStatus(200)
         })
         .catch(err => {
