@@ -27,3 +27,4 @@ This repo includes:
 * configuration for Jest and Enzyme (including JSDOM)
 * configuration for server-side debugging in VS Code
 * a single client-side test (`client/components/App.test.js`)
+# About-me
