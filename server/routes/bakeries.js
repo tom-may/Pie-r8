@@ -41,8 +41,16 @@ router.patch('/:id', (req,res) => {
     const id = req.params.id
     const bakery = req.body
     db.updateBakery(id, bakery.name, bakery.address)
-
+    .then(() => {
+        res.sendStatus(200)
+    })
+    .catch(err => {
+        console.log("Error", err)
+        res.status(500).json({message: "Something went worng"})
+    })
 })
+
+
 
 router.delete('/:id', (req,res) => {
     const id = req.params.id

@@ -6,19 +6,18 @@ function getBakeries (db = connection) {
 
 function getBakeryById(id, db = connection) {
     return db('bakeries')
-    .where(id, 'id')
+    .where('id', id)
     .first()
 }
 
 function addBakery (bakery, db = connection) {
     return db('bakeries')
-    .insert(bakery, 'id' )
-    .then(ids = ids[0])
+    .insert(bakery, 'id')
 }
 
 function updateBakery (id, name, address, db = connection) {
     return db('bakeries')
-    .where(id,'id')
+    .where('id', id)
     .update({
         name: name,
         address: address
@@ -27,7 +26,7 @@ function updateBakery (id, name, address, db = connection) {
 
 function deleteBakery (id, db = connection) {
     return db('bakeries')
-    .where(id,'id')
+    .where('id', id)
     .delete()
 }
 
