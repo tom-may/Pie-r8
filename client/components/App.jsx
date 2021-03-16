@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { checkAuth } from '../actions/auth'
 import Landing from './Landing.jsx'
 import Nav from './Nav.jsx'
+import Bakeries from './Bakeries.jsx'
 
 function App({ auth, dispatch }) {
 
@@ -17,9 +18,13 @@ function App({ auth, dispatch }) {
   return (
 
     <Router>
-      <Route path='/' component={Nav} />
-      <Route path='/' component={Landing} />
       
+      <Route path='/' component={Nav} />
+
+    <div>
+      <Route exact path='/' component={Landing} />
+      <Route path='/bakeries' component={Bakeries} />
+    </div>
 
     </Router>
 

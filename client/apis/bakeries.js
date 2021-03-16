@@ -4,9 +4,7 @@ const rootUrl = '/api/v1/bakeries'
 
 export function getBakeries () {
   return request.get(rootUrl)
-    .then(res => {
-      return res.body.bakeries
-    })
+    .then(res => res.body)
 }
 
 export function getBakeryById(id) {
@@ -30,4 +28,3 @@ export function addBakery(bakery) {
     .send(bakery)
     .then(res => res.body)
   }
-  

@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 
 
 function Landing() {
@@ -28,8 +29,7 @@ function Landing() {
 
 				<div className={`navbar-menu ${burgerVisible ? "is-active" : ''}`}>
 					<div className="navbar-end">
-						<a className="navbar-item">BAKERIES</a>
-						<a className="navbar-item">REVIEWS</a>
+						<Link className="navbar-item" to='/bakeries'>BAKERIES</Link>						<a className="navbar-item">REVIEWS</a>
 						<a className="navbar-item">PROFILE</a>
 						<a className="navbar-item">LOGOUT</a>
 					</div>
