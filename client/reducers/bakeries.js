@@ -1,4 +1,4 @@
-import { SET_BAKERIES, ADD_BAKERY, DELETE_BAKERY, UPDATE_BAKERY } from '../actions'
+import { SET_BAKERIES, ADD_BAKERY, DELETE_BAKERY, UPDATE_BAKERY } from '../actions/bakeries'
 
 const initialState = []
 
