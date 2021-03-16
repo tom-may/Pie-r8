@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-
+import { checkAuth } from '../actions/auth'
 import Landing from './Landing.jsx'
 import Nav from './Nav.jsx'
 
-const App = () => {
+function App({ auth, dispatch }) {
+
+  useEffect(() => {
+    const confirmSuccess = () => { }
+    dispatch(checkAuth(confirmSuccess))
+  }, [])
+
 
   return (
 
@@ -19,5 +26,10 @@ const App = () => {
   )
 }
 
+const mapStateToProps = ({ auth }) => {
+  return {
+    auth
+  }
+}
 
-export default App
+export default connect(mapStateToProps)(App)
