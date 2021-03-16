@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
 import auth from './auth'
-import fruits from './fruits'
+import bakeries from './bakeries'
 
 export default combineReducers({
   auth,
-  fruits
+  bakeries
 })

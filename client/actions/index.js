@@ -1,4 +1,4 @@
-import { getFruits } from '../apis/fruits'
+import { getFruits } from '../apis/bakeries'
 
 export const SET_FRUITS = 'SET_FRUITS'
 
