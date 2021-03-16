@@ -1,19 +1,19 @@
-import { getFruits } from '../apis/bakeries'
+import { getBakeries } from '../apis/bakeries'
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_BAKERIES = 'SET_BAKERIES'
 
-export function setFruits (fruits) {
+export function setBakeries (bakeries) {
   return {
-    type: SET_FRUITS,
-    fruits
+    type: SET_BAKERIES,
+    bakeries
   }
 }
 
-export function fetchFruits () {
+export function fetchBakeries () {
   return dispatch => {
-    return getFruits()
-      .then(fruits => {
-        dispatch(setFruits(fruits))
+    return getBakeries()
+      .then(bakeries => {
+        dispatch(setBakeries(bakeries))
         return null
       })
   }
