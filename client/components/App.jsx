@@ -6,6 +6,7 @@ import { checkAuth } from '../actions/auth'
 import Landing from './Landing.jsx'
 import Nav from './Nav.jsx'
 import Bakeries from './Bakeries.jsx'
+import Bakery from './Bakery.jsx'
 
 function App({ auth, dispatch }) {
 
@@ -23,6 +24,7 @@ function App({ auth, dispatch }) {
 
     <div>
       <Route exact path='/' component={Landing} />
+      <Route path='/bakery/:id' component={Bakery} />
       <Route path='/bakeries' component={Bakeries} />
     </div>
 

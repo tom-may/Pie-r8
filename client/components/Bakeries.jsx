@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchBakeries, deleteTheBakery } from '../actions/bakeries'
-import { addBakery } from '../apis/bakeries'
 
 
 function Bakeries(props){
@@ -31,14 +30,14 @@ console.log(props)
 							const id = bakery.id
                 return( 
                     <>
-                        <h1 key={bakery.id}>{bakery.name}</h1>
-												<button onClick={(e)=>handleDelete(id, e)}>Delete</button>
-												<br></br>
+                      <Link to={`/bakery/${id}`}><h1>{bakery.name}</h1></Link>
+											<button onClick={(e)=>handleDelete(id, e)}>Delete</button>
+											<br></br>
+											<br></br>
                     </>
                 )
                 }
             )}
-
         </>
     )
 
